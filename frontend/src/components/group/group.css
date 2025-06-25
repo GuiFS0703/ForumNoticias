@@ -1,0 +1,17 @@
+.group {
+  width: 25vw;
+  padding-bottom: 1vw;
+  background-color: #172c3a;
+  box-shadow: 4px 1px 20px 1px #57606a;
+  border-radius: 5px;
+  text-align: start;
+}
+
+.group .conteudo {
+    margin-inline: 2vw;
+}
+
+.group .member-topic {
+    display: flex;
+    gap: 2vw;
+ }

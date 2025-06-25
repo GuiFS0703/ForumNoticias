@@ -1,0 +1,25 @@
+.post {
+  padding: 2vw;
+  width: 20vw;
+  background-color: #1c2128;
+  border-radius: 10px;
+}
+
+.post .nome-foto {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.post .nome-foto img {
+    width: 3vw;
+}
+
+.post .nome-foto p {
+  font-weight: bold;
+}
+
+.post .hashtags {
+  display: flex;
+  gap: 2vw;
+}

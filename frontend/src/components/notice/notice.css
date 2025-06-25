@@ -1,0 +1,20 @@
+ .one-notice {
+  width: 80%;
+}
+
+.one-notice .data-nome {
+  display: flex;
+  justify-content: space-between;
+}
+
+ .one-notice .data-nome #title {
+  font-weight: bolder;
+}
+
+.one-notice hr {
+  margin-top: 2vw;
+}
+
+.one-notice button {
+  border-radius: 2.5px;
+}

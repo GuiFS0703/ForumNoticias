@@ -1,0 +1,89 @@
+.config {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.remove-button {
+  background-color: white;
+  color: red;
+}
+
+input {
+  border: none;
+  padding: 0.25vw;
+  width: 30vw;
+  font-weight: 500;
+  height: 2vw;
+  border-radius: 5px;
+  background-color: #1c2128;
+  color: white;
+  box-shadow: 0px 6px 17px 7px #00000096;
+}
+
+select {
+    background-color: #1c2128;
+    color: white;
+      box-shadow: 0px 6px 17px 7px #00000096;
+}
+
+textarea {
+  border: none;
+  padding: 1vw;
+  width: 35vw;
+  font-weight: 500;
+  height: 15vw;
+  border-radius: 10px;
+  background-color: #1c2128;
+  color: white;
+  box-shadow: 0px 6px 17px 7px #00000096;
+  margin-bottom: 20px;
+}
+
+.remove-button:hover {
+  background-color: red;
+  color: white;
+}
+
+.session-config {
+  padding: 2vw;
+  border-radius: 10px;
+  width: 70%;
+  margin-block: 2vw;
+  background-color: #1C2128;
+}
+
+.session-config .profile .image-config {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.session-config .profile .image-config .buttons-photo {
+  display: flex;
+  gap: 2vw;
+}
+
+
+.session-config .buttons {
+display: flex;
+justify-content: space-between;
+padding: 1vw;
+}
+
+.session-config .buttons  .delete-button {
+    background-color: red;
+    color: white;
+}
+
+.session-config .buttons .delete-button:hover {
+    background-color: white;
+    color: red;
+}
+
+.session-config .buttons button {
+    height: 4vw;
+    width: 10vw;
+    font-size: 1.1rem;
+}

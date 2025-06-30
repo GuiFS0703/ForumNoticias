@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const CreateAccount = () => {
   return (
-    <>
+    <div className="bodyzinho">
       <div className="card-create">
         <div className="left-side">
           <div className="left-header">
@@ -21,7 +21,7 @@ const CreateAccount = () => {
         <div className="right-side">
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

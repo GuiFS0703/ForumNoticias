@@ -1,0 +1,20 @@
+.simple-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-top: 7vw;
+    margin-bottom: 2vw;
+}
+
+.simple-menu .item{
+width: 3vw;
+font-size: 1.5rem;
+transition: 0.5s ease-in-out;
+cursor: pointer;
+}
+
+.simple-menu .item:hover {
+    transform: scale(1.2);
+}
+

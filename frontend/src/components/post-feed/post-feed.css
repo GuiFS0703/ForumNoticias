@@ -1,0 +1,50 @@
+.hr-post {
+  width: 80%;
+}
+
+.post_content {
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.post_content .post_identification {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+  width: 100%;
+}
+
+.post_content .post_identification p{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.post_content .post_identification img {
+  width: 3.5vw;
+}
+
+.post_content p {
+  width: 90%;
+}
+.post_content .post-interaction {
+  display: flex;
+  gap: 4vw;
+}
+
+.post_content .post-interaction .like,
+.post_content .post-interaction .dislike,
+.post_content .post-interaction .share {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  transition: 0.5s ease-in-out;
+}
+
+.post_content .post-interaction .like:hover,
+.post_content .post-interaction .dislike:hover ,
+.post_content .post-interaction .share:hover {
+transform: scale(1.1);
+}

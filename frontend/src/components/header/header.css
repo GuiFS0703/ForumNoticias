@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    padding: 1vw;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1vw;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    background-color: #161B22;
+}
+
+.header #logo {
+    width: 5vw;
+    height: 2vw;
+}
+
+.header #photo {
+    width: 3vw;
+}

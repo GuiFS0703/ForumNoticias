@@ -1,0 +1,103 @@
+.chat {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.main-chat {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-block: 2vw;
+}
+
+.friends-session {
+    background-color: #1C2128;
+    border-radius: 10px;
+    padding-block: 2vw;
+    width: 35vw;
+    height: 110vh;
+    box-sizing: border-box;
+}
+
+.friends-session > input {
+    margin-inline: 2vw;
+    margin-top: 2vw;
+}
+
+
+.friends-session #separador {
+    margin-block: 2vw;
+    border: 2px solid white;
+}
+
+.chat-session {
+    background-color: #1C2128;
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 110vh;
+    padding-inline: 1vw;
+    padding-bottom: 1vw;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.chat-session .header-chat-session {
+    background-color: #172C3A;
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 12vw;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-top: 2vw;
+}
+
+
+.chat-session .person-profile {
+display: flex;
+align-items: center;
+gap: 1vw;
+}
+
+.chat-session .person-profile img {
+    width: 5vw;
+    height: 5vw;
+}
+
+.chat-session .person-profile p {
+    font-size: 0.8rem;
+}
+
+.chat-session .content-chat{
+    background-color: #1C2128;
+    height: 75vh;
+    width: 100%;
+    padding: 1vw;
+}
+
+.chat-session .input-chat { 
+height: 7vh;
+width: 100%;
+padding: 1vw;
+background-color: #1C2128;
+display: flex;
+gap: 1vw;
+align-items: center;
+}
+
+.chat-session .input-chat input {
+    width: 45vw;
+    padding: 0.5vw;
+}
+
+.chat-session .input-chat img {
+    width: 1.75vw;
+    cursor: pointer;
+}

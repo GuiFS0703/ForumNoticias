@@ -1,0 +1,22 @@
+
+.hr-people-card{
+    margin-inline: 2vw;
+    width: 90%;
+}
+
+.people-card {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    margin-inline: 2vw;
+}
+
+
+.people-card img {
+    width: 4vw;
+    height: 4vw;
+}
+
+.people-card p {
+    font-size: 0.8rem;
+}

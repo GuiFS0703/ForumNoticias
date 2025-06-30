@@ -1,0 +1,38 @@
+.group-info{
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1C2128;
+}
+
+.group-info img {
+    width: 25vw;
+}
+
+.group-info .group-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2vw;
+}
+
+.group-info .group-content .members-messages {
+    display: flex;
+    gap: 2vw;
+}
+
+.group-info .group-content button {
+    margin: 1vw;
+    width: 15vw;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.group-info .group-content #leave {
+    background-color: white;
+    color: red;
+}
+
+

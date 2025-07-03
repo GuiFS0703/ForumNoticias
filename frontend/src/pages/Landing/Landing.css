@@ -1,4 +1,4 @@
-header {
+#menu-desktop {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,11 +6,106 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background-color: #161B22;
+  background-color: #161b22;
   top: 0;
 }
 
-header img {
+#menu-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0%;
+  overflow: hidden; /*só exibe o que tiver dentro do tamamnho do pai.*/
+  display: none;
+  background-color: #172c3a;
+  flex-direction: column;
+  align-items: start;
+  height: 100vh;
+  transition: 0.5s ease-in-out;
+}
+
+#menu-mobile nav {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 6vw;
+  margin: 0;
+  margin-top: 4vw;
+  align-items: center;
+}
+
+#menu-mobile nav button {
+  width: 22vw;
+  padding: 1vw;
+  height: 8vw;
+  align-self: center;
+}
+
+#menu-mobile nav ul {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  gap: 8vw;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#menu-mobile nav ul li {
+  width: 100%;
+  text-align: end;
+  padding: 4vw;
+  transition: 0.2s ease;
+}
+
+#menu-mobile nav ul li:hover {
+  background-color: #58a6ff;
+}
+
+#botao-menu-mobile {
+  display: none;
+  position: fixed;
+  top: 3vw;
+  right: 3vw;
+  font-size: 1.65rem;
+  cursor: pointer;
+}
+
+#sair-menu-mobile {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 2vw;
+}
+
+#mobile-footer {
+  display: none;
+  background-color: #172c3a;
+  padding: 8vw;
+  flex-direction: column;
+  align-items: center;
+}
+
+#mobile-footer .social-media,
+#mobile-footer .mobile-links {
+  display: flex;
+  gap: 4vw;
+  margin-block: 2vw;
+}
+
+#mobile-footer .social-media .ico {
+  border: 1px solid gray;
+  padding: 2.5vw;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#mobile-footer .social-media .ico:hover {
+  transform: scale(1.1);
+}
+
+#menu-desktop img {
   margin-inline: 1vw;
 }
 
@@ -193,70 +288,365 @@ button:hover {
   transform: scale(1.1);
 }
 
-#argument .argument-cards .ex-argument  img {
+#argument .argument-cards .ex-argument img {
   width: 10vw;
 }
 
-footer {
+#desktop-footer {
   padding: 4vw;
-  background-color: #172C3A;
+  background-color: #172c3a;
   display: flex;
   flex-direction: column;
   gap: 12vw;
 }
 
-footer .superior-footer {
-display: flex;
-justify-content: space-between;
+#desktop-footer .superior-footer {
+  display: flex;
+  justify-content: space-between;
 }
 
-footer .superior-footer .slogan-button {
+#desktop-footer .superior-footer .slogan-button {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2vw;
 }
 
-footer .superior-footer .slogan-button button {
+#desktop-footer .superior-footer .slogan-button button {
   border-radius: 30px;
   width: 10vw;
 }
 
-footer .superior-footer .slogan-button b {
+#desktop-footer .superior-footer .slogan-button b {
   font-size: 1.5rem;
   color: white;
 }
 
-footer .superior-footer .slogan-button .buttons {
+#desktop-footer .superior-footer .slogan-button .buttons {
   display: flex;
   gap: 2vw;
 }
 
-footer .superior-footer .links {
+#desktop-footer .superior-footer .links {
   display: flex;
   gap: 2vw;
 }
 
-footer .superior-footer .links ul {
+#desktop-footer .superior-footer .links ul {
   display: flex;
   flex-direction: column;
   gap: 2.5vw;
 }
 
-footer .superior-footer .links ul .title {
+#desktop-footer .superior-footer .links ul .title {
   font-weight: bolder;
   color: white;
 }
 
-footer .inferior-footer .terms-service {
+#desktop-footer .inferior-footer .terms-service {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
 
-footer .inferior-footer > p {
+#desktop-footer .inferior-footer > p {
   font-weight: bolder;
   font-size: 12rem;
   margin-block: 3vw;
   color: white;
+}
+
+/*Responsividade: */
+
+@media (max-width: 1024px) {
+  /*config menu e gerais: */
+  #argument,
+  #search,
+  #groups,
+  #posts,
+  #about,
+  #banner {
+    margin-block: 7vw;
+  }
+  #desktop-footer {
+    display: none;
+  }
+  #menu-desktop {
+    display: none;
+  }
+
+  #menu-mobile {
+    display: block;
+  }
+  #botao-menu-mobile {
+    display: block;
+  }
+
+  #menu-mobile.ativo {
+    width: 50vw;
+  }
+
+  #landing p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  #menu-mobile nav ul {
+    gap: 5vw;
+  }
+
+  #menu-mobile nav ul li {
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 4vw;
+    padding-inline-end: 7vw;
+  }
+
+  #botao-menu-mobile {
+    top: 1.5vw;
+    font-size: 2rem;
+  }
+
+  #sair-menu-mobile {
+    font-size: 2rem;
+  }
+
+ 
+
+  #argument h2,
+  #search h2,
+  #notices h2,
+  #groups h2,
+  #posts h2,
+  #about h2,
+  #banner h2 {
+    font-size: 2rem;
+  }
+
+  /*Sessao 1: */
+  #banner > h1 {
+    font-size: 2.75rem;
+  }
+
+   #banner button {
+    font-size: 1rem;
+    width: 15vw;
+    height: 4vw;
+  }
+  /*Sessao 2: */
+
+  #about p {
+    font-size: 1.4rem;
+    width: 60%;
+  }
+
+  /*Notice */
+    #groups .img-group {
+    height: 13vw;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  /*config menu e gerais: */
+  #argument,
+  #search,
+  #groups,
+  #posts,
+  #about,
+  #banner {
+    margin-block: 10vw;
+  }
+
+  #menu-mobile.ativo {
+    width: 40vw;
+  }
+
+  #landing p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  #mobile-footer {
+    display: flex;
+  }
+
+  button {
+    font-size: 1.1rem;
+    width: 20vw;
+    padding: 1.5vw;
+    height: 6vw;
+  }
+
+  #mobile-footer > p {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+
+  /*config sections*/
+
+  #banner > h1 {
+    font-size: 2rem;
+  }
+
+  /*SESSION 2*/
+
+  #about p {
+    font-size: 1.3rem;
+    width: 80%;
+  }
+
+  #about h2 {
+    font-size: 1.75rem;
+  }
+
+  /*SESSION 3: */
+
+  #posts h2 {
+    font-size: 1.75rem;
+  }
+
+  #posts .cards-posts {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+  }
+  /*SESSION 4: */
+  #groups h2 {
+    font-size: 1.75rem;
+  }
+  #groups .cards-group {
+    flex-direction: column;
+    gap: 10vw;
+  }
+
+  #groups .img-group {
+    background-size: cover;
+    height: 20vw;
+  }
+
+  #groups .conteudo {
+    padding: 2vw;
+  }
+
+  /*SESSION 5: */
+  #search h2 {
+    font-size: 1.75rem;
+  }
+  #search .input-buscar input {
+    height: 5vw;
+    width: 60vw;
+    font-size: 1.1rem;
+  }
+
+  /*SESSION 6: */
+  #argument .argument-cards {
+    flex-direction: column;
+    gap: 6vw;
+  }
+
+  #argument .argument-cards .ex-argument {
+    width: 35vw;
+    height: 30vw;
+  }
+}
+
+@media (max-width: 481px) {
+  /*config menu e gerais: */
+  #argument,
+  #search,
+  #groups,
+  #posts,
+  #about,
+  #banner {
+    margin-block: 15vw;
+  }
+
+  #argument h2,
+  #search h2,
+  #groups h2,
+  #notices h2,
+  #posts h2,
+  #about h2,
+  #banner h2 {
+    font-size: 1.4rem;
+  }
+
+  #landing p,
+  a {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  #menu-mobile.ativo {
+    width: 50vw;
+  }
+
+  button {
+    width: 25vw;
+    height: 8vw;
+  }
+
+  #banner {
+    height: 70vw;
+  }
+  #banner h1 {
+    font-size: 1.7rem;
+  }
+
+  /*Sessao 1: */
+
+  #about p {
+    width: 90%;
+  }
+
+  /*Sessao 2: */
+
+  #posts .cards-posts {
+    gap: 15vw;
+  }
+
+  /*Sessao 3: */
+  #notices .cards-notice {
+    width: 90%;
+  }
+  /*Sessao 4: */
+  #groups .img-group {
+    height: 35vw;
+  }
+  /*Sessao 5: */
+
+  #search .input-buscar input {
+    height: 7vw;
+    width: 70vw;
+    font-size: 0.95rem;
+    padding: 0.5vw;
+  }
+
+  #search .input-buscar button {
+    width: 18vw;
+    height: 7vw;
+    font-size: 0.95rem;
+  }
+
+  /*Sessao 6: */
+  #argument .argument-cards .ex-argument {
+    width: 45vw;
+    height: 50vw;
+  }
+
+  #argument .argument-cards .ex-argument p {
+    margin-top: 0;
+  }
+
+  #argument .argument-cards .ex-argument img {
+    width: 15vw;
+  }
+
+  /*Footer */
+  #mobile-footer .social-media .ico {
+    font-size: 1.2rem;
+    padding: 4vw;
+  }
 }

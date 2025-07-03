@@ -1,4 +1,4 @@
- .one-notice {
+.one-notice {
   width: 80%;
 }
 
@@ -7,7 +7,7 @@
   justify-content: space-between;
 }
 
- .one-notice .data-nome #title {
+.one-notice .data-nome #title {
   font-weight: bolder;
 }
 
@@ -17,4 +17,42 @@
 
 .one-notice button {
   border-radius: 2.5px;
+}
+
+@media (max-width: 1024px) {
+  .one-notice button {
+    width: 13vw;
+    height: 3vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .one-notice {
+    width: 90%;
+    padding: 1vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .one-notice {
+    width: 100%;
+    padding: 3vw;
+  }
+
+  .one-notice hr {
+    margin-top: 5vw;
+  }
+
+  .one-notice .data-nome {
+    display: flex;
+    justify-content: start;
+    gap: 5vw;
+  }
+
+  .one-notice button {
+    width: 25vw;
+    padding: 1vw;
+    height: 7vw;
+    font-size: 0.95rem;
+  }
 }

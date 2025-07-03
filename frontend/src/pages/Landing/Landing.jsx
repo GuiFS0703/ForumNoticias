@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useRef } from "react";
 import "./Landing.css";
 import logo from "../../assets/whiteNexusForum.png";
 import GroupCard from "../../components/group/group";
@@ -8,11 +8,38 @@ import brain from "../../assets/brain.png";
 import people from "../../assets/people.png";
 import rocket from "../../assets/rocket.png";
 import { Link } from "react-router-dom";
+import { faX, faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faDiscord,
+  faInstagram,
+  faTwitter,
+  faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Landing = () => {
+  const menu = useRef(null); //pode ser const por const permitir objetos e arrays de ter uma mudança em alguma propriedade dela, mas não o todo da estrutura.
+
+  function AbrirMenu() {
+    if (menu.current) {
+      console.log(menu.current);
+      menu.current.classList.add("ativo");
+    } else {
+      console.log("Elemento não encontrado!");
+    }
+  }
+
+  function fecharMenu() {
+    if (menu.current) {
+      menu.current.classList.remove('ativo');
+    } else {
+      console.log("O menu não foi obtido!");
+    }
+  }
+
   return (
     <>
-      <header>
+      <header id="menu-desktop">
         <img src={logo} alt="Logo branca da empresa!" />
         <nav>
           <ul>
@@ -43,7 +70,49 @@ const Landing = () => {
           </Link>
         </nav>
       </header>
-      <main>
+
+      <FontAwesomeIcon
+        id="botao-menu-mobile"
+        icon={faBars}
+        onClick={AbrirMenu}
+      />
+      <header id="menu-mobile" ref={menu}>
+        <FontAwesomeIcon
+          icon={faX}
+          id="sair-menu-mobile"
+          onClick={fecharMenu}
+        />
+            <nav>
+          <ul>
+            <li>
+              <a href="#banner">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#posts">Posts</a>
+            </li>
+            <li>
+              <a href="#notices">Notices</a>
+            </li>
+            <li>
+              <a href="#groups">Groups</a>
+            </li>
+            <li>
+              <a href="#search">Search</a>
+            </li>
+            <li>
+              <a href="#argument">Why</a>
+            </li>
+          </ul>
+          <Link to="/login">
+            <button>Login</button>
+          </Link>
+        </nav>
+      </header>
+
+      <main id="landing">
         <section id="banner">
           <h1>
             Connect. <br /> Discuss. <br /> Share.
@@ -114,7 +183,7 @@ const Landing = () => {
             </div>
           </div>
         </section>
-        <footer>
+        <footer id="desktop-footer">
           <div className="superior-footer">
             <div className="slogan-button">
               <b>Connect. Discuss. Share</b>
@@ -148,6 +217,21 @@ const Landing = () => {
             </div>
             <p>NEXUS FORUM</p>
           </div>
+        </footer>
+
+        <footer id="mobile-footer">
+          <div className="social-media">
+            <FontAwesomeIcon icon={faInstagram} className="ico" />
+            <FontAwesomeIcon icon={faTwitter} className="ico" />
+            <FontAwesomeIcon icon={faDiscord} className="ico" />
+            <FontAwesomeIcon icon={faFacebook} className="ico" />
+          </div>
+          <div className="mobile-links">
+            <p>About Us</p>
+            <p>Send Message</p>
+            <p>Support</p>
+          </div>
+          <p>© 2025 NexusForum. All rights reserved.</p>
         </footer>
       </main>
     </>

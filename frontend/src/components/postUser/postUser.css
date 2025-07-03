@@ -12,7 +12,7 @@
 }
 
 .post .nome-foto img {
-    width: 3vw;
+  width: 3vw;
 }
 
 .post .nome-foto p {
@@ -22,4 +22,38 @@
 .post .hashtags {
   display: flex;
   gap: 2vw;
+}
+
+@media (max-width: 1024px) {
+  .post {
+    width: 22vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .post {
+    width: 60%;
+  }
+
+  .post .nome-foto {
+    gap: 3vw;
+  }
+
+  .post .nome-foto img {
+    width: 7vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .post {
+    width: 80%;
+  }
+
+    .post .nome-foto {
+    gap: 2vw;
+  } 
+
+  .post .nome-foto img {
+    width: 10vw;
+  }
 }

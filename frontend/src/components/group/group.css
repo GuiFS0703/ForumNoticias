@@ -8,10 +8,43 @@
 }
 
 .group .conteudo {
-    margin-inline: 2vw;
+  margin-inline: 2vw;
 }
 
 .group .member-topic {
-    display: flex;
-    gap: 2vw;
- }
+  display: flex;
+  gap: 2vw;
+}
+
+@media (max-width: 1024px) {
+  .group {
+    width: 30vw;
+  }
+
+  .group .conteudo button {
+    width: 10vw;
+    height: 3vw;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .group {
+    width: 70%;
+    height: 80vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .group {
+    width: 80%;
+    height: 105vw;
+  }
+
+  .group .conteudo button {
+    width: 25vw;
+    padding: 2vw;
+    height: 8vw;
+    font-size: 0.95rem;
+  }
+}

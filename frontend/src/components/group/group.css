@@ -16,29 +16,67 @@
   gap: 2vw;
 }
 
+.group .img-group {
+  height: 11vw;
+  background-image: url(../../assets/js-group.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 @media (max-width: 1024px) {
   .group {
     width: 30vw;
+  }
+
+  .group .img-group {
+    height: 15vw;
   }
 
   .group .conteudo button {
     width: 10vw;
     height: 3vw;
     font-size: 0.8rem;
+
   }
 }
 
 @media (max-width: 768px) {
+   .group .img-group {
+    background-size: cover;
+    height: 30vw;
+  }
+
+  .group .conteudo {
+    padding: 2vw;
+  }
   .group {
     width: 70%;
-    height: 80vw;
+    height: 83vw;
   }
 }
 
 @media (max-width: 480px) {
   .group {
     width: 80%;
-    height: 105vw;
+    height: 110vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .group .conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .group .conteudo h3 {
+    align-self: start;
+  }
+
+    .group .img-group {
+    height: 50vw;
   }
 
   .group .conteudo button {
@@ -46,5 +84,9 @@
     padding: 2vw;
     height: 8vw;
     font-size: 0.95rem;
+  }
+
+  .groups .conteudo {
+    padding: 1vw;
   }
 }

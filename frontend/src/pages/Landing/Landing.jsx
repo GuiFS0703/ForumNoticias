@@ -38,7 +38,7 @@ const Landing = () => {
   }
 
   return (
-    <>
+    <div id="landing-div">
       <header id="menu-desktop">
         <img src={logo} alt="Logo branca da empresa!" />
         <nav>
@@ -234,7 +234,7 @@ const Landing = () => {
           <p>© 2025 NexusForum. All rights reserved.</p>
         </footer>
       </main>
-    </>
+    </div>
   );
 };
 

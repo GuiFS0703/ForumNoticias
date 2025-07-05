@@ -21,7 +21,7 @@
 
 @media (max-width: 1024px) {
   .one-notice button {
-    width: 13vw;
+    width: 15vw;
     height: 3vw;
   }
 }
@@ -46,7 +46,7 @@
   .one-notice .data-nome {
     display: flex;
     justify-content: start;
-    gap: 5vw;
+    gap: 3vw;
   }
 
   .one-notice button {

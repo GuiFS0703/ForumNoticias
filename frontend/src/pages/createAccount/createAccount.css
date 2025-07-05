@@ -11,6 +11,7 @@
   border-radius: 10px;
   background-color: #1c2128;
   display: flex;
+  box-sizing: border-box;
 }
 
 .card-create .left-side {
@@ -29,6 +30,11 @@
   margin-bottom: 2vw;
 }
 
+.card-create .left-side h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
 .card-create .left-side .left-header img {
   width: 5vw;
 }
@@ -45,9 +51,113 @@
   box-shadow: 0px 6px 17px 7px #00000096;
 }
 
+.card-create .left-side button {
+  width: 10vw;
+  height: 2.5vw;
+  border-radius: 20px;
+  background-color: #58a6ff;
+  border: none;
+  color: white;
+  transition: 0.37s ease-in-out;
+  cursor: pointer;
+}
+
+.card-create .left-side button:hover {
+  color: #58a6ff;
+  background-color: white;
+}
+
 .card-create .right-side {
   width: 40vw;
-  background-image: url(../../assets/person-waving.png);
+  background-image: url(../../assets/hihi.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/*Responsividade */
+
+@media (max-width: 1024px) {
+  .card-create .left-side .left-header img {
+    width: 8vw;
+  }
+  .card-create .left-side input {
+    font-size: 0.95rem;
+    padding: 0.5vw;
+  }
+
+  .card-create .left-side button {
+    padding: 0.5vw;
+    height: 4vw;
+    width: 12vw;
+    border-radius: 5px;
+    font-size: 0.95rem;
+  }
+
+   .card-create .left-side p, .card-create .left-side a{
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-create{
+    width: 90%;
+    padding: 2vw;
+  }
+  .card-create .right-side {
+    display: none;
+  }
+  .card-create .left-side {
+    width: 100%;
+    gap: 5vw;
+  }
+  .card-create .left-side .left-header img {
+    width: 14vw;
+  }
+
+  .card-create .left-side h2 {
+    font-size: 1.75rem;
+  }
+
+  .card-create .left-side input {
+    width: 90%;
+    height: 5vw;
+    padding: 1vw;
+    font-size: 1.1rem;
+  }
+
+  .card-create .left-side button {
+    height: 7vw;
+    border-radius: 5px;
+    width: 20vw;
+    font-size: 1.1rem;
+  }
+  .card-create .left-side p, .card-create .left-side a {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 481px) {
+.card-create .left-side .left-header img {
+  width: 20vw;
+}
+
+.card-create .left-side h2 {
+  font-size: 1.4rem;
+}
+
+.card-create .left-side input {
+  font-size: 0.95rem;
+  height: 7vw;
+}
+
+.card-create .left-side button {
+  width: 25vw;
+  height: 8vw;
+  font-size: 0.95rem;
+}
+
+.card-create .left-side p, .card-create .left-side a {
+  font-size: 0.7rem;
+}
 }

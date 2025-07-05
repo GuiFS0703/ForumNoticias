@@ -5,12 +5,11 @@
   flex-direction: column;
 }
 
-.remove-button {
-  background-color: white;
-  color: red;
+button {
+  cursor: pointer;
 }
 
-input {
+.session-config input {
   border: none;
   padding: 0.25vw;
   width: 30vw;
@@ -23,12 +22,12 @@ input {
 }
 
 select {
-    background-color: #1c2128;
-    color: white;
-      box-shadow: 0px 6px 17px 7px #00000096;
+  background-color: #1c2128;
+  color: white;
+  box-shadow: 0px 6px 17px 7px #00000096;
 }
 
-textarea {
+.session-config textarea {
   border: none;
   padding: 1vw;
   width: 35vw;
@@ -41,17 +40,12 @@ textarea {
   margin-bottom: 20px;
 }
 
-.remove-button:hover {
-  background-color: red;
-  color: white;
-}
-
 .session-config {
   padding: 2vw;
   border-radius: 10px;
   width: 70%;
   margin-block: 2vw;
-  background-color: #1C2128;
+  background-color: #1c2128;
 }
 
 .session-config .profile .image-config {
@@ -65,25 +59,168 @@ textarea {
   gap: 2vw;
 }
 
+.session-config .profile .image-config .buttons-photo #change {
+  width: 8vw;
+  height: 3vw;
+  transition: 0.5s ease-in-out;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  color: #58a6ff;
+}
+
+.session-config .profile .image-config .buttons-photo #change:hover {
+  color: white;
+  background-color: #58a6ff;
+}
+
+.session-config .profile .image-config .buttons-photo #remove {
+  border-radius: 10px;
+  width: 8vw;
+  height: 3vw;
+  transition: 0.5s ease-in-out;
+  border: none;
+  background-color: white;
+  color: red;
+}
+
+.session-config .profile .image-config .buttons-photo #remove:hover {
+  background-color: red;
+  color: white;
+}
 
 .session-config .buttons {
-display: flex;
-justify-content: space-between;
-padding: 1vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw;
 }
 
-.session-config .buttons  .delete-button {
-    background-color: red;
-    color: white;
+.session-config .buttons #delete-button {
+  background-color: red;
+  color: white;
 }
 
-.session-config .buttons .delete-button:hover {
-    background-color: white;
-    color: red;
+.session-config .buttons #delete-button:hover {
+  background-color: white;
+  color: red;
 }
 
 .session-config .buttons button {
-    height: 4vw;
-    width: 10vw;
+  height: 4vw;
+  width: 10vw;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  transition: 0.5s ease-in-out;
+}
+
+.session-config .buttons #save {
+  background-color: #58a6ff;
+  color: white;
+}
+
+.session-config .buttons #save:hover {
+  color: #58a6ff;
+  background-color: white;
+}
+
+/*Responsividade*/
+
+@media (max-width: 1024px) {
+  .session-config h2 {
+    font-size: 1.7rem;
+  }
+
+  .session-config h3 {
+    font-size: 1.4rem;
+  }
+
+  .session-config .profile .image-config img {
+    width: 8vw;
+  }
+
+  .session-config input {
+    width: 50%;
+    height: 3vw;
+    font-size: 0.95rem;
+  }
+  .session-config textarea {
+    width: 50%;
+  }
+  .session-config .profile .image-config .buttons-photo #change,
+  .session-config .profile .image-config .buttons-photo #remove,
+  .session-config .buttons #delete-button,
+  .session-config .buttons #save {
+    width: 15vw;
+    height: 5vw;
+
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .session-config {
+    width: 85%;
+  }
+  .session-config h2 {
+    font-size: 1.75rem;
+  }
+
+  .session-config h3 {
+    font-size: 1.5rem;
+  }
+
+  .session-config .profile .image-config img {
+    width: 8.5vw;
+  }
+  .session-config .profile .image-config .buttons-photo #change,
+  .session-config .profile .image-config .buttons-photo #remove,
+  .session-config .buttons #delete-button,
+  .session-config .buttons #save {
     font-size: 1.1rem;
+    width: 30vw;
+    height: 6.5vw;
+  }
+
+  .session-config input {
+    font-size: 1.1rem;
+    width: 70%;
+    height: 5vw;
+  }
+
+  .session-config textarea {
+    width: 70%;
+  }
+}
+
+@media (max-width: 481px) {
+
+  .session-config {
+    width: 90%;
+  }
+  .session-config h2 {
+    font-size: 1.4rem;
+  }
+
+  .session-config h3 {
+    font-size: 1.2rem;
+  }
+
+  .session-config .profile .image-config img {
+    width: 12vw;
+  }
+
+  .session-config .profile .image-config .buttons-photo #change,
+  .session-config .profile .image-config .buttons-photo #remove,
+  .session-config .buttons #delete-button,
+  .session-config .buttons #save {
+    font-size: 0.95rem;
+    width: 35vw;
+    height: 8vw;
+  }
+
+  .session-config input {
+    font-size: 0.95rem;
+    height: 7vw;
+  }
 }

@@ -11,6 +11,7 @@ const CreateAccount = () => {
           <div className="left-header">
             <img src={logo} alt="" />
           </div>
+          <h2>Hi! Welcome!</h2>
            <input type="text" placeholder="Enter your name: "/>
           <input type="text" placeholder="Enter your email"/>
           <input type="text" placeholder="Enter your password"/>

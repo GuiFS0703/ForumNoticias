@@ -5,6 +5,7 @@
     justify-content: space-between;
     margin-bottom: 1vw;
     width: 100%;
+    height: 6vw;
     box-sizing: border-box;
     position: fixed;
     top: 0;
@@ -13,9 +14,46 @@
 
 .header #logo {
     width: 5vw;
-    height: 2vw;
 }
 
 .header #photo {
     width: 3vw;
+}
+
+/*Responsividade*/
+
+@media (max-width: 1024px) {
+    .header #logo {
+        width: 8vw;
+    }
+
+    .header #photo {
+        width: 4vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 5vw;
+    }
+ .header #logo {
+    width: 14vw;
+ }
+
+ .header #photo {
+    width: 6vw;
+ }
+
+ @media (max-width: 481px) {
+    .header {
+        padding-block: 8vw;
+    }
+    .header #logo {
+        width: 20vw;
+    }
+
+    .header #photo {
+        width: 8vw;
+    }
+ }
 }

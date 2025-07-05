@@ -10,7 +10,7 @@ const LoginPage = () => {
           <div className="cabecalho-esquerdo">
             <img src={logo} alt="Logo NexusForum" />
           </div>
-          <h3>Welcome Back!</h3>
+          <h2>Welcome Back!</h2>
           <input type="text" placeholder="Enter your name: " />
           <input type="text" placeholder="Enter your password" />
           <button>Login</button>

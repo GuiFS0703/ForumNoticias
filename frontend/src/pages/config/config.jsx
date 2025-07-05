@@ -17,8 +17,8 @@ const Config = () => {
           <div className="image-config">
             <img src={photo} alt="Random Photo" />
             <div className="buttons-photo">
-              <button>Change Picture</button>
-              <button className="remove-button">Remove Picture</button>
+              <button id="change">Change Picture</button>
+              <button id="remove">Remove Picture</button>
             </div>
           </div>
         </div>
@@ -43,8 +43,8 @@ const Config = () => {
         </div>
         <hr />
         <div className="buttons">
-          <button className="delete-button">Delete Account</button>
-          <button>Save Changes</button>
+          <button id="delete-button">Delete Account</button>
+          <button id="save">Save Changes</button>
         </div>
       </div>
     </div>

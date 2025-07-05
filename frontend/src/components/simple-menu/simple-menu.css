@@ -12,9 +12,32 @@ width: 3vw;
 font-size: 1.5rem;
 transition: 0.5s ease-in-out;
 cursor: pointer;
+color:#C9D1D9;
 }
 
 .simple-menu .item:hover {
     transform: scale(1.2);
 }
 
+/*Responsividade*/
+
+@media (max-width: 768px) {
+.simple-menu {
+    margin-top: 10vw;
+}
+
+.simple-menu .item {
+    width: 5vw;
+}
+}
+
+@media (max-width: 481px) {
+    .simple-menu {
+        margin-top: 18vw;
+        gap: 6vw;
+    }
+
+    .simple-menu .item {
+        width: 6.5vw;
+    }
+}

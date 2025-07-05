@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 7vw;
+  height: 5.5vw;
   position: fixed;
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
   background-color: #161b22;
   top: 0;
 }
@@ -15,6 +15,7 @@
   top: 0;
   right: 0;
   width: 0%;
+  z-index: 1000;
   overflow: hidden; /*só exibe o que tiver dentro do tamamnho do pai.*/
   display: none;
   background-color: #172c3a;
@@ -107,30 +108,31 @@
 
 #menu-desktop img {
   margin-inline: 1vw;
+  width: 7vw;
 }
 
-a {
+#landing-div a {
   text-decoration: none;
   color: #c9d1d9;
   transition: 0.5s ease-in-out;
 }
 
-a:hover {
+#landing-div a:hover {
   text-decoration: underline;
 }
-ul {
+#landing-div ul {
   list-style: none;
   display: flex;
   gap: 4vw;
 }
 
-nav {
+#landing-div nav {
   display: flex;
   gap: 3vw;
   margin-inline: 1vw;
 }
 
-button {
+#landing-div button {
   background-color: #58a6ff;
   width: 7vw;
   height: 3vw;
@@ -141,7 +143,7 @@ button {
   transition: 0.5s ease-in;
 }
 
-button:hover {
+#landing-div button:hover {
   background-color: #c9d1d9;
   color: #58a6ff;
 }
@@ -155,6 +157,7 @@ button:hover {
   background-repeat: no-repeat;
   background-size: cover;
   height: 50vw;
+  margin-top: 6vw;
 }
 
 #banner h1 {
@@ -214,13 +217,6 @@ button:hover {
   flex-direction: column;
   align-items: center;
   margin-block: 4vw;
-}
-
-#groups .img-group {
-  height: 11vw;
-  background-image: url(../../assets/js-group.png);
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 #groups .cards-group {
   display: flex;
@@ -368,8 +364,9 @@ button:hover {
   #banner {
     margin-block: 7vw;
   }
-  #desktop-footer {
-    display: none;
+
+  #landing-div button {
+    width: 13vw;
   }
   #menu-desktop {
     display: none;
@@ -411,7 +408,10 @@ button:hover {
     font-size: 2rem;
   }
 
- 
+  #menu-mobile nav button {
+    width: 15vw;
+    font-size: 1.2rem;
+  }
 
   #argument h2,
   #search h2,
@@ -420,15 +420,15 @@ button:hover {
   #posts h2,
   #about h2,
   #banner h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   /*Sessao 1: */
   #banner > h1 {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
   }
 
-   #banner button {
+  #banner button {
     font-size: 1rem;
     width: 15vw;
     height: 4vw;
@@ -436,16 +436,45 @@ button:hover {
   /*Sessao 2: */
 
   #about p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     width: 60%;
   }
 
   /*Notice */
-    #groups .img-group {
-    height: 13vw;
+  /*Search: */
+  #search .input-buscar input {
+    font-size: 0.8rem;
+    padding: 0.5vw;
   }
 
+  /*Why*/
 
+  #argument .argument-cards .ex-argument {
+    padding: 3vw;
+  }
+
+  /*Footer: */
+  #desktop-footer .superior-footer .slogan-button b {
+    font-size: 1.3rem;
+  }
+
+  #desktop-footer .superior-footer .slogan-button button {
+    width: 13vw;
+    height: 4vw;
+  }
+  #desktop-footer .superior-footer .links ul li {
+    font-size: 0.8rem;
+  }
+
+  #desktop-footer .inferior-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #desktop-footer .inferior-footer > p {
+    font-size: 6rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -458,7 +487,9 @@ button:hover {
   #banner {
     margin-block: 10vw;
   }
-
+  #desktop-footer {
+    display: none;
+  }
   #menu-mobile.ativo {
     width: 40vw;
   }
@@ -471,12 +502,13 @@ button:hover {
     display: flex;
   }
 
-  button {
+  #landing button {
     font-size: 1.1rem;
     width: 20vw;
-    padding: 1.5vw;
-    height: 6vw;
+    padding: 0.5vw;
+    height: 5.5vw;
   }
+
 
   #mobile-footer > p {
     font-size: 0.9rem;
@@ -519,15 +551,6 @@ button:hover {
   #groups .cards-group {
     flex-direction: column;
     gap: 10vw;
-  }
-
-  #groups .img-group {
-    background-size: cover;
-    height: 20vw;
-  }
-
-  #groups .conteudo {
-    padding: 2vw;
   }
 
   /*SESSION 5: */
@@ -583,9 +606,19 @@ button:hover {
     width: 50vw;
   }
 
-  button {
+  #menu-mobile nav button {
+    width: 20vw;
+    font-size: 0.98rem;
+  }
+
+  #menu-mobile nav ul li {
+    font-size: 0.98rem;
+  }
+
+  #landing button {
     width: 25vw;
     height: 8vw;
+    font-size: 0.98rem;
   }
 
   #banner {
@@ -593,6 +626,11 @@ button:hover {
   }
   #banner h1 {
     font-size: 1.7rem;
+  }
+
+  #botao-menu-mobile,
+  #sair-menu-mobile {
+    font-size: 1.75rem;
   }
 
   /*Sessao 1: */
@@ -610,10 +648,6 @@ button:hover {
   /*Sessao 3: */
   #notices .cards-notice {
     width: 90%;
-  }
-  /*Sessao 4: */
-  #groups .img-group {
-    height: 35vw;
   }
   /*Sessao 5: */
 

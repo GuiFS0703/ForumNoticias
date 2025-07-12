@@ -3,15 +3,15 @@ import "./chat.css";
 import Header from "../../components/header/header";
 import Menu from "../../components/simple-menu/simple-menu";
 import People_card from "../../components/card-message/people-card";
-import random from "../../assets/random-photo.png";
-import archive from "../../assets/archive-image.png";
-import send from "../../assets/send-image.png";
-
+import archive from "../../assets/clips.png";
+import send from "../../assets/send.png";
+import { Link } from "react-router-dom";
 const Chat = () => {
   return (
     <div className="chat">
-      <Header />
-      <Menu />
+      <Header/>
+      <Menu/>
+      <hr id="separador"/>
       <div className="main-chat">
         <div className="friends-session">
           <input type="text" placeholder="Find your friends...." />
@@ -23,15 +23,6 @@ const Chat = () => {
           <People_card />
         </div>
         <div className="chat-session">
-          <div className="header-chat-session">
-            <div className="person-profile">
-              <img src={random} alt="" />
-              <div className="name-activity">
-                <h3>Lorem Ipsum</h3>
-                <p>Online 30 minutos ago</p>
-              </div>
-            </div>
-          </div>
           <div className="content-chat"></div>
           <hr style={{width: "100%"}} />
           <div className="input-chat">
@@ -39,6 +30,16 @@ const Chat = () => {
             <input type="text" placeholder="Write anything...." />
             <img src={send} alt="Ícone de enviar mensagem" />
           </div>
+        </div>
+
+        <div className="mobile-cards">
+          <People_card />
+          <People_card />
+          <People_card />
+          <People_card />
+          <People_card />
+          <People_card />
+          <People_card />
         </div>
       </div>
     </div>

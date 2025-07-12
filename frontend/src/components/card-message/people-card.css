@@ -1,10 +1,14 @@
+.one-person-card a{
+    text-decoration: none;
+    color: white;
+}
 
-.hr-people-card{
+.hr-person-card{
     margin-inline: 2vw;
     width: 90%;
 }
 
-.people-card {
+.person-card {
     display: flex;
     gap: 1vw;
     align-items: center;
@@ -12,11 +16,37 @@
 }
 
 
-.people-card img {
+.person-card img {
     width: 4vw;
     height: 4vw;
 }
 
-.people-card p {
+.person-card p {
     font-size: 0.8rem;
+}
+
+@media (max-width: 1024px) {
+    .person-card {
+        gap: 4vw;
+    }
+.person-card img {
+    width: 8vw;
+    height: 8vw;
+}
+
+.person-card .name-message p{
+font-size: 0.8rem;
+}
+
+.person-card .name-message h3 {
+    margin-bottom: 0;
+}
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 481px){
+
 }

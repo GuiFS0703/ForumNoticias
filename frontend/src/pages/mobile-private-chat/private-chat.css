@@ -1,0 +1,126 @@
+.private-chat {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.private-chat img {
+    cursor: pointer;
+}
+
+.private-chat .private-chat-header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 20vw;
+  width: 100%;
+}
+
+.private-chat .private-chat-header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 5vw;
+}
+
+.private-chat .private-chat-header hr {
+  width: 100%;
+}
+
+.private-chat .private-chat-header .header-content img {
+  width: 7vw;
+}
+
+.private-chat .private-chat-header .header-content h3 {
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+.send-message {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.send-message hr {
+  width: 100%;
+}
+
+.send-message .send-content {
+    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: 5vw;
+  padding-block: 4vw; 
+}
+
+.send-message .send-content img {
+    width: 4vw;
+}
+
+.send-message .send-content label {
+    width: 4vw;
+}
+
+.send-message .send-content #file {
+  display: none;
+}
+
+.send-message .send-content #text-input {
+    font-size: 0.95rem;
+    border: none;
+    width: 65vw;
+    height: 3vw;
+    padding: 1vw;
+    border-radius: 15px;
+    background-color: #1c2128;
+    color: white;
+    box-shadow: 0px 6px 17px 7px #00000096;
+    font-weight: normal;
+}
+
+
+/*Responsividade: */
+
+@media (max-width: 768px) {
+.private-chat .private-chat-header .header-content h3 {
+    font-size: 1.5rem;
+}
+
+.send-message .send-content #text-input {
+    font-size: 1.1rem;
+    width: 70vw;
+    height: 3.5vw;
+}
+
+
+}
+
+@media (max-width: 481px) {
+    .private-chat .private-chat-header .header-content h3 {
+        font-size: 1.2rem;
+    }
+    .private-chat .private-chat-header .header-content img {
+    width: 7vw;
+}
+
+
+
+.send-message .send-content #text-input {
+    height: 5vw;
+    padding: 1.5vw;
+}
+
+.send-message .send-content img {
+    width: 4.5vw;
+}
+
+.send-message .send-content label {
+    width: 4.5vw;
+}
+}

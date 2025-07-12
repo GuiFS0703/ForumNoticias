@@ -3,6 +3,7 @@ import "./createAccount.css";
 import logo from "../../assets/whiteNexusForum.png";
 import { Link } from "react-router-dom";
 
+
 const CreateAccount = () => {
   return (
     <div className="bodyzinho">

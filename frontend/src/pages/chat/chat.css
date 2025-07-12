@@ -1,103 +1,189 @@
 .chat {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
+.chat > #separador {
+  display: none;
+}
 
 .main-chat {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin-block: 2vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-block: 2vw;
+}
+
+.chat .mobile-cards {
+  display: none;
 }
 
 .friends-session {
-    background-color: #1C2128;
-    border-radius: 10px;
-    padding-block: 2vw;
-    width: 35vw;
-    height: 110vh;
-    box-sizing: border-box;
+  background-color: #1c2128;
+  border-radius: 10px;
+  padding-block: 2vw;
+  width: 35vw;
+  height: 110vh;
+  box-sizing: border-box;
 }
 
 .friends-session > input {
-    margin-inline: 2vw;
-    margin-top: 2vw;
+  margin-inline: 2vw;
+  margin-top: 2vw;
+  width: 30vw;
+  border: none;
+  font-weight: 500;
+  height: 1.5vw;
+  border-radius: 10px;
+  background-color: #1c2128;
+  color: white;
+  box-shadow: 0px 6px 17px 7px #00000096;
+  padding: 0.5vw;
 }
 
-
 .friends-session #separador {
-    margin-block: 2vw;
-    border: 2px solid white;
+  margin-block: 2vw;
+  border: 2px solid white;
 }
 
 .chat-session {
-    background-color: #1C2128;
-    width: 55vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 110vh;
-    padding-inline: 1vw;
-    padding-bottom: 1vw;
-    border-radius: 10px;
-    box-sizing: border-box;
+  background-color: #1c2128;
+  width: 55vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 110vh;
+  padding-inline: 1vw;
+  padding-bottom: 1vw;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
-.chat-session .header-chat-session {
-    background-color: #172C3A;
-    padding: 1vw;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 12vw;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    padding-top: 2vw;
-}
 
 
 .chat-session .person-profile {
-display: flex;
-align-items: center;
-gap: 1vw;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
 }
 
 .chat-session .person-profile img {
-    width: 5vw;
-    height: 5vw;
+  width: 5vw;
+  height: 5vw;
 }
 
 .chat-session .person-profile p {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
-.chat-session .content-chat{
-    background-color: #1C2128;
-    height: 75vh;
-    width: 100%;
-    padding: 1vw;
+.chat-session .content-chat {
+  background-color: #1c2128;
+  height: 75vh;
+  width: 100%;
+  padding: 1vw;
 }
 
-.chat-session .input-chat { 
-height: 7vh;
-width: 100%;
-padding: 1vw;
-background-color: #1C2128;
-display: flex;
-gap: 1vw;
-align-items: center;
+.chat-session .input-chat {
+  height: 7vh;
+  width: 100%;
+  padding: 1vw;
+  background-color: #1c2128;
+  display: flex;
+  gap: 1vw;
+  align-items: center;
 }
 
 .chat-session .input-chat input {
-    width: 45vw;
-    padding: 0.5vw;
+  width: 45vw;
+  border: none;
+  font-weight: 500;
+  height: 2vw;
+  border-radius: 10px;
+  background-color: #1c2128;
+  color: white;
+  box-shadow: 0px 6px 17px 7px #00000096;
+  padding: 0.5vw;
 }
 
 .chat-session .input-chat img {
-    width: 1.75vw;
-    cursor: pointer;
+  width: 1.75vw;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .person-card .name-message p {
+    font-weight: 300;
+  }
+  .chat .simple-menu {
+    display: none;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .chat .mobile-cards {
+    display: block;
+  }
+  .chat .main-chat {
+    margin: 0;
+  }
+
+  .chat .main-chat .friends-session,
+  .chat .main-chat .chat-session {
+    display: none;
+  }
+
+  
+  .chat #separador {
+    display: block;
+    border: none;
+    border: 1.75px solid white;
+    width: 99%;
+    margin-inline: 0;
+  }
+
+  .chat .main-chat .mobile-cards {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .person-card img {
+    width: 10vw;
+    height: 10vw;
+  }
+  .person-card .name-message p {
+    font-size: 1.1rem;
+  }
+
+  .person-card .name-message h3 {
+    font-size: 1.4rem;
+  }
+}
+
+
+@media (max-width: 481px) {
+
+
+
+.person-card .name-message h3 {
+  font-size: 1.2rem;
+}
+
+.person-card .name-message p, .chat .mobile-chat-header input {
+  font-size: 0.95rem;
+}
+
+.chat .mobile-chat-header input {
+  padding: 1.5vw;
+}
+
+.person-card img {
+  width: 13vw;
+  height: 13vw;
+}
 }

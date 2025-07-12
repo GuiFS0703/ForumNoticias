@@ -611,8 +611,8 @@
     font-size: 0.98rem;
   }
 
-  #menu-mobile nav ul li {
-    font-size: 0.98rem;
+  #menu-mobile nav ul li a {
+    font-size: 1rem;
   }
 
   #landing button {
